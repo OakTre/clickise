@@ -25,6 +25,14 @@
     border: var(--border) solid var(--border-color);
     border-radius: var(--br);
     cursor: pointer;
+
+    @include mq(sm) {
+      --py: 1rem;
+      --px: 1rem;
+      --br: 2rem;
+
+      font: var(--weight) var(--font-small);
+    }
   }
 
   input:checked {

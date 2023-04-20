@@ -5,9 +5,17 @@
 
   .page-grid {
     --grid-gap: 6rem 3rem;
+
+    @include mq(sm) {
+      display: block;
+    }
   }
 
   margin-bottom: 12.8rem;
+
+  @include mq(sm) {
+    margin-bottom: 6rem;
+  }
 
   &__btn {
     --py: 2rem;
@@ -16,9 +24,21 @@
     --font: var(--weight) var(--font-big);
 
     margin-top: 10rem;
+
+    @include mq(sm) {
+      margin-top: 6rem;
+    }
   }
 }
 
 .blog-card-item {
   grid-column: 4 span;
+
+  @include mq(sm) {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
