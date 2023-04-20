@@ -1,0 +1,12 @@
+mixin nav()
+  -
+    nav = [
+      { name: "Преимущества", link: "./" },
+      { name: "Условия", link: "./" },
+      { name: "О Telegram Ads", link: "./" },
+    ]
+
+  nav.nav&attributes(attributes)
+    ul.nav__list
+      for item in nav
+        li.nav__item #[a.nav__link(href=item.link)= item.name]

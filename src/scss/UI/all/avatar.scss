@@ -1,0 +1,78 @@
+.avatar {
+  --avatar-dir: row;
+  --avatar-gap: 2.4rem;
+
+  display: flex;
+  flex-direction: var(--avatar-dir);
+  gap: var(--avatar-gap);
+  align-items: flex-start;
+
+  &__img-wrapper {
+    flex-shrink: 0;
+    width: 10.6rem;
+    height: 10.6rem;
+
+    @include mq(sm) {
+      width: 5.4rem;
+      height: 5.4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 29rem;
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__legend {
+    --weight: 500;
+    --default-alfa-color: 100%;
+
+    color: hsla(var(--primary-h) var(--primary-s) var(--primary-b) / var(--default-alfa-color));
+    font: var(--weight) var(--font-big);
+  }
+
+  &__text {
+    --default-alfa-color: 60%;
+
+    color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+    font: var(--weight) var(--font-reg);
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include mq(sm) {
+    --avatar-dir: row !important;
+    --avatar-gap: 1.6rem !important;
+  }
+}

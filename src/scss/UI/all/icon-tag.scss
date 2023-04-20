@@ -1,0 +1,21 @@
+.icon-tag {
+  --default-alfa-color: 90%;
+  --color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+    --default-alfa-color: 90%;
+
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+    fill: var(--color);
+  }
+
+  &__label {
+    display: block;
+    color: var(--color);
+    font: var(--weight) var(--font-reg);
+  }
+}

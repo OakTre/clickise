@@ -1,0 +1,28 @@
+.tag {
+  --color-h: var(--primary-h);
+  --color-s: var(--primary-s);
+  --color-b: var(--primary-b);
+  --color-bg-h: var(--color-white-h);
+  --color-bg-s: var(--color-white-s);
+  --color-bg-b: var(--color-white-b);
+  --py: 1.2rem;
+  --px: 1.6rem;
+  --br: 3rem;
+  --weight: 400;
+  --color: hsla(var(--color-h) var(--color-s) var(--color-b) / var(--default-alfa-color));
+  --bg: hsla(var(--color-bg-h) var(--color-bg-s) var(--color-bg-b) / var(--default-alfa-bg));
+
+  display: inline-block;
+  align-self: flex-start;
+  padding: var(--py) var(--px);
+  color: var(--color);
+  font: var(--weight) var(--font-small);
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  background-color: var(--bg);
+  border-radius: var(--br);
+
+  &:hover {
+    --color-white-b: 95%;
+  }
+}

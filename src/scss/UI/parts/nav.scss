@@ -1,0 +1,38 @@
+/* stylelint-disable selector-class-pattern */
+.nav {
+  --default-alfa-color: 70%;
+  --weight: 500;
+  --gap: 6rem;
+
+  &__list {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+  }
+
+  &__link {
+    color: hsl(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+    font: var(--weight) var(--font-reg);
+
+    &:hover {
+      --default-alfa-color: 100%;
+    }
+  }
+
+  &--column {
+    --gap: 3rem;
+
+    .nav__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &--big {
+    --weight: 400;
+
+    .nav__link {
+      font: var(--weight) var(--font-medium2);
+    }
+  }
+}

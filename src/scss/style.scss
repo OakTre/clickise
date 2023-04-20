@@ -1,0 +1,81 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "GraphikLCG", sans-serif;
+  --font-size-main: 0.595vw;
+
+  /* color - primary */
+  --primary-h: 79;
+  --primary-s: 87%;
+  --primary-b: 48%;
+
+  /* color - primary-light */
+  --primary-light-h: 80;
+  --primary-light-s: 32%;
+  --primary-light-b: 91%;
+
+  /* color - dark */
+  --dark-h: 60;
+  --dark-s: 5%;
+  --dark-b: 9%;
+
+  /* color - white */
+  --color-white-h: 0;
+  --color-white-s: 20%;
+  --color-white-b: 99%;
+
+  /* color - white */
+  --color-bg-h: 0;
+  --color-bg-s: 0%;
+  --color-bg-b: 98%;
+
+  /* colors */
+  --color-light-grey: 253 252 252;
+  --color-white: 255 255 255;
+
+  /* fonts */
+  --font-small: 1.2rem/1 var(--main-ff);
+  --font-small2: 1.4rem/1 var(--main-ff);
+  --font-reg: 1.6rem/1 var(--main-ff);
+  --font-medium: 1.8rem/2.4rem var(--main-ff);
+  --font-medium2: 2rem/1rem var(--main-ff);
+  --font-big: 2.4rem/1 var(--main-ff);
+  --font-heading-big: 6.2rem/7.2rem var(--main-ff);
+  --font-heading: 4.8rem/5.4rem var(--main-ff);
+  --font-heading-2: 4rem/4.6rem var(--main-ff);
+  --font-heading-3: 3.2rem/3.8rem var(--main-ff);
+
+  /* etc */
+  --transition: 100ms ease-in;
+  --rounded-16: 1.6rem;
+  --rounded-20: 2rem;
+  --rounded-30: 3rem;
+  --rounded-40: 4rem;
+  --padding-offset: 40px;
+  --header-height: 12rem;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/all/**/*";
+@import "./UI/controls/**/*";
+@import "./UI/parts/**/*";
+@import "./blocks/**/*";
+@import "./pages/**/*";
+
+@include mq(sm) {
+  :root {
+    --header-height: 9rem;
+    --font-reg: 1.4rem/1 var(--main-ff);
+    --font-medium: 1.6rem/1 var(--main-ff);
+    --font-medium2: 1.6rem/1rem var(--main-ff);
+    --font-big: 2rem/1 var(--main-ff);
+    --font-heading-big: 3.2rem/3.6rem var(--main-ff);
+    --font-heading: 2.2rem/2.4rem var(--main-ff);
+    --font-heading-2: 2rem/1 var(--main-ff);
+    --font-heading-3: 1.8rem/1 var(--main-ff);
+
+    --padding-offset: 20px;
+  }
+}

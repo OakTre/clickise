@@ -1,0 +1,51 @@
+.view-shield {
+  --py: 6rem;
+  --px: var(--py);
+  --bg-image: url("../images/shield/img1.jpg");
+  --br: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 142rem;
+  min-height: 50rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--py) var(--px);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: var(--br);
+
+  @include mq(custom, max, 1440) {
+    max-width: 90%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    --weight: 500;
+
+    max-width: 87rem;
+    font: var(--weight) var(--font-heading);
+  }
+
+  &__btn {
+    --py: 1.6rem;
+    --px: 2.4rem;
+    --font: var(--weight) var(--font-big);
+    --br: 3rem;
+
+    letter-spacing: -0.01em;
+  }
+}

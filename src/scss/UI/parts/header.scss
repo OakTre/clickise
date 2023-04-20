@@ -1,0 +1,50 @@
+.header {
+  --color-logo-primary: hsla(var(--dark-h) var(--dark-b) var(--dark-b) / var(--default-alfa-color));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: var(--header-height);
+  overflow: hidden;
+
+  &__container {
+    width: 100%;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+
+    @include mq(md) {
+      display: flex;
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  &-grid__column {
+    &:nth-child(1) {
+      grid-column: 4 span;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      grid-column: 8 span;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @include mq(md) {
+    .nav {
+      display: none;
+    }
+  }
+}

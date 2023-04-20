@@ -1,0 +1,11 @@
+header.header
+  .header__container.page-grid
+    .header-grid__column
+      a.logo(href="./" aria-label="Перейти на главную страницу")
+        +icon-multi("logo")(width="308" height="36" aria-label="Логотип компании Clickise")
+    .header-grid__column
+      +nav(nav)
+
+      .header__btn-group
+        button.button.button--light Войти
+        button.button Регистрация

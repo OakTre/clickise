@@ -1,0 +1,13 @@
+.logo {
+  display: inline-block;
+
+  max-width: 30.8rem;
+
+  .icon {
+    width: 100%;
+  }
+
+  @include mq(sm) {
+    max-width: 16rem;
+  }
+}

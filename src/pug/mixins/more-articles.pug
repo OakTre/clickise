@@ -1,0 +1,12 @@
+mixin more-articles()
+  -
+    arr = ["img1", "img2", "img3"]
+
+  section.more-articles
+    .site-container
+      h2.page-heading-2(style="--offset-b: 5rem;") Рекомендуемые статьи
+
+      ul.more-articles__list.page-grid
+        each i in Array.from(Array(3).keys())
+          li.more-articles__item
+            +blog-card()

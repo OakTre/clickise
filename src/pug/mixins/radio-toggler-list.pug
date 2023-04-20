@@ -1,0 +1,9 @@
+mixin  radio-toggler-list()
+  form.blog-list-filter
+    label.radio-toggler
+      input(type="checkbox" class="visually-hidden radio-toggler__control" name="custom" val="all")
+      span.radio-toggler__label ВСЕ СТАТЬИ
+    for i in Array.from(Array(6).keys())
+      label.radio-toggler
+        input(type="checkbox" class="visually-hidden radio-toggler__control" name="custom" val="all")
+        span.radio-toggler__label Категория статьи

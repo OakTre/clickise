@@ -1,0 +1,13 @@
+mixin blog-card()
+  article.article-card
+    .article-card__image-container
+      .article-card__tags
+        a.tag(href="./") Категория статьи
+      img(src="assets/images/cards/img1.jpg" alt="")
+    header.article-card__info
+      h2.article-card__heading
+        a(href="./blog-detail.html") Заголовок статьи на одну или несколько строк
+      p.article-card__txt
+        | Описание статьи или анонс. Пишем первый абзац и выводим на странице всего три или четыре строки с описанием и кнопка смотреть все...
+
+      time.article-card__time(datetime="2023-04-18") 18 апреля 2023

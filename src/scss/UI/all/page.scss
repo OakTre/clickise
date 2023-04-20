@@ -1,0 +1,28 @@
+.page-section-offset {
+  margin-bottom: 9rem;
+
+  @include mq(sm) {
+    margin-bottom: 6rem;
+  }
+}
+
+.page-grid {
+  --grid-gap: 3rem;
+  --grid-column: 12;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column), 1fr);
+  gap: var(--grid-gap);
+}
+
+.page-heading-2 {
+  --weight: 500;
+
+  margin-bottom: var(--offset-b);
+  font: var(--weight) var(--font-heading-2);
+
+  @include mq(sm) {
+    --offset-b: 3rem !important;
+    font: var(--weight) var(--font-heading);
+  }
+}

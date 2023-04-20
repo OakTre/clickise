@@ -1,0 +1,12 @@
+section.blog-list
+  .site-container
+    +radio-toggler-list()
+
+    .blog-card-container
+      .page-grid
+        each i in Array.from(Array(6).keys())
+          .blog-card-item
+            +blog-card()
+
+      button.button.blog-card-container__btn
+        | Показать еще 6 статей

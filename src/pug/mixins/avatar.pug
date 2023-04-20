@@ -1,0 +1,13 @@
+mixin avatar(name, text, socials)
+  .avatar&attributes(attributes)
+    .avatar__img-wrapper
+      img(src="assets/images/avatar/img1.jpg" class="avatar__img" alt='Автар' + name)
+    .avatar__info
+      .avatar__legend= name
+      .avatar__text= text
+    if socials
+      ul.avatar__socials
+        for item in socials
+          li.avatar__socials-item
+            a.avatar__socials-link(href="./" arial-label="Соц. сеть" + item.name)
+              +icon-multi(item.icon)(width="24" height="24")

@@ -1,0 +1,25 @@
+.more-articles {
+  margin-bottom: 12rem;
+
+  &__list {
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.button {
+  --py: 1.2rem;
+  --px: 2rem;
+  --br: 2rem;
+  --bg: hsla(var(--primary-h) var(--primary-s) var(--primary-b) / var(--default-alfa-bg));
+  --font: var(--weight) var(--font-reg);
+
+  justify-content: center;
+  padding: var(--py) var(--px);
+  color: rgba(var(--color-dark) / var(--default-alfa-color));
+  font: var(--font);
+  background-color: var(--bg);
+  border-radius: var(--br);
+  transition: background-color var(--transition);
+
+  &:hover {
+    --primary-b: 41%;
+  }
+
+  &:active {
+    --primary-b: 35%;
+  }
+
+  &--light {
+    --default-alfa-bg: 20%;
+
+    &:hover {
+      --default-alfa-bg: 100%;
+      --primary-b: 41%;
+    }
+
+    &:active {
+      --primary-b: 35%;
+    }
+  }
+
+  &--secondary {
+    --default-alfa-bg: 5%;
+    --bg: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-bg));
+
+    &:hover {
+      --default-alfa-bg: 10%;
+    }
+  }
+
+  &--white {
+    --bg: hsla(var(--color-white-h) var(--color-white-s) var(--color-white-b) / var(--default-alfa-bg));
+
+    &:hover {
+      --color-white-b: 95%;
+    }
+  }
+}

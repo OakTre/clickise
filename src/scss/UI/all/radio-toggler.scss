@@ -1,0 +1,39 @@
+/* stylelint-disable selector-class-pattern */
+.radio-toggler {
+  display: block;
+
+  &__label {
+    --color-white-h: 0;
+    --color-white-s: 20%;
+    --color-white-b: 99%;
+    --py: 1.6rem;
+    --px: 2rem;
+    --br: 3rem;
+    --border: 1px;
+    --default-alfa-color: 60%;
+    --color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+    --bg: hsla(var(--color-white-h) var(--color-white-s) var(--color-white-b) / var(--default-alfa-bg));
+    --border-color: var(--color);
+
+    display: block;
+    padding: var(--py) var(--px);
+    color: var(--color);
+    font: var(--weight) var(--font-small2);
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    background-color: var(--bg);
+    border: var(--border) solid var(--border-color);
+    border-radius: var(--br);
+    cursor: pointer;
+  }
+
+  input:checked {
+    ~.radio-toggler__label {
+      --border: 0;
+      --default-alfa-color: 100%;
+      --color-white-h: var(--primary-h);
+      --color-white-s: var(--primary-s);
+      --color-white-b: var(--primary-b);
+    }
+  }
+}
