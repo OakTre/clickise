@@ -46,7 +46,7 @@
             </nav>
             <div class="header__btn-group">
               <button class="button button--light">Войти</button>
-              <button class="btn-burger" aria-label="Открыть главное меню"><span class="visually-hidden">Главное меню</span>
+              <button class="btn-burger js-open-menu" aria-label="Открыть главное меню"><span class="visually-hidden">Главное меню</span>
                 <svg class="icon icon-burger" width="12" height="9">
                   <use xlink:href="assets/images/sprites/sprite-mono.svg#burger"></use>
                 </svg>
@@ -56,6 +56,39 @@
           </div>
         </div>
       </header>
+      <section class="menu">
+        <div class="site-container">
+
+          <header class="menu__header">
+            <a class="logo" href="./" aria-label="Перейти на главную страницу">
+              <svg class="icon icon-logo logo__desktop" width="308" height="36" aria-label="Логотип компании Clickise">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+              </svg>
+              <svg class="icon icon-logo-mobile logo__mobile" width="100" height="33" aria-hidden="true" aria-label="Логотип компании Clickise">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#logo-mobile"></use>
+              </svg>
+            </a>
+            <button class="btn-burger js-close-menu" aria-label="Открыть главное меню"><span class="visually-hidden">Закрыть главное меню</span>
+              <svg class="icon icon-close" width="12" height="9">
+                <use xlink:href="assets/images/sprites/sprite-mono.svg#close"></use>
+              </svg>
+            </button>
+          </header>
+          <nav class="nav footer__nav nav--column nav--big">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./">Преимущества</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./">Условия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./">О Telegram Ads</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
 
       <main class="page-main main">
         <section class="article page-section-offset">
