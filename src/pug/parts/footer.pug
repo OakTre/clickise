@@ -9,10 +9,18 @@ footer.footer.footer--bg
   .site-container.footer__container.page-grid
     .footer__grid-column
       .footer__logo
-        +icon-multi("logo2")(width="170" height="56")
+        +icon-multi("logo2")(width="170" height="56" class="desktop")
+        +icon-multi("logo2_mobile")(width="200" height="36" class="mobile")
 
     .footer__grid-column
       +nav()(class="footer__nav nav--column nav--big")
+
+      ul.footer__links.footer__links--mobile
+        for item, index in links
+          li.footer__links-item
+            a(href=item.link class={'flex-center': item.icon})= item.name
+              if (item.icon)
+                img(src=item.icon alt=item.name)
 
     .footer__grid-column
       ul.footer__links

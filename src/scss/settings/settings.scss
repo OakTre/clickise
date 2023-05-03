@@ -183,7 +183,7 @@ img {
 
 .site-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: calc(1320px + (var(--padding-offset) * 2));
   margin: 0 auto;
   padding: 0 var(--padding-offset);
 }

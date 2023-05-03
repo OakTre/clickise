@@ -1,9 +1,16 @@
 .blog-list-filter {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
+  width: auto;
+  margin-right: calc(-1 * var(--padding-offset));
   margin-bottom: 6rem;
+  padding-right: var(--padding-offset);
+  overflow: hidden;
+  overflow-x: scroll;
+
+  @include noScrollbar();
 
   @include mq(sm) {
     gap: 1rem;

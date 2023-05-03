@@ -4,8 +4,25 @@
   padding: 5rem 0;
   background-color: hsla(var(--primary-light-h) var(--primary-light-s) var(--primary-light-b) / var(--default-alfa-color));
 
+  @include mq(sm) {
+    padding: 3rem 0 2.8rem;
+    border-radius: 4rem 4rem 0;
+  }
+
   &__nav.nav {
     --default-alfa-color: 100%;
+
+    @include mq(sm) {
+      --gap: 1.6rem;
+    }
+  }
+
+  &__container {
+    @include mq(sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 
   &__logo {
@@ -13,6 +30,20 @@
 
     .icon {
       width: 100%;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @include mq(sm) {
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: block;
+      }
     }
   }
 
@@ -23,6 +54,10 @@
       @include mq(md) {
         grid-column: 12 span;
       }
+
+      @include mq(sm) {
+        order: 1;
+      }
     }
 
     &:nth-child(2) {
@@ -30,6 +65,10 @@
 
       @include mq(md) {
         grid-column: 6 span;
+      }
+
+      @include mq(sm) {
+        order: 3;
       }
     }
 
@@ -40,6 +79,14 @@
 
       @include mq(md) {
         grid-column: 6 span;
+      }
+
+      @include mq(sm) {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        order: 2;
       }
     }
   }
@@ -66,6 +113,21 @@
         &:hover {
           --default-alfa-color: 100%;
         }
+      }
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    @include mq(sm) {
+      display: none;
+
+      &--mobile {
+        display: flex;
+        gap: 1.2rem;
+        max-width: 100%;
+        margin-top: 3rem;
       }
     }
   }

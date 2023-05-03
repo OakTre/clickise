@@ -2,16 +2,19 @@
 .blockquote {
   --default-alfa-bg: 2%;
 
-  display: flex;
-  align-items: center;
-  padding: 2.4rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: var(--grid-gap);
+  place-items: center;
   background-color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-bg));
   border-radius: 1.6rem;
 
   &__inner {
     position: relative;
+    grid-column: 5 span;
 
     p {
+      max-width: 49.2rem;
       margin: 0 !important;
       font: var(--weight) var(--font-big);
       line-height: 3rem;
@@ -23,24 +26,26 @@
 
     &::before {
       position: absolute;
-      top: -20px;
+      top: 4px;
       left: -73px;
       color: #8ac40e;
       font-weight: 500;
       font-size: 13.6rem;
-      line-height: 12rem;
+      line-height: 0.4;
       opacity: 0.3;
       content: "“";
 
       @include mq(sm) {
-        display: none;
+        top: 1.5rem;
+        left: -2rem;
       }
     }
   }
 
   &__img {
     flex-shrink: 0;
-    margin-right: 6rem;
+    grid-column: 3 span;
+    padding: 2.4rem 3rem;
 
     .avatar {
       align-items: center;
@@ -57,12 +62,15 @@
     }
 
     @include mq(sm) {
-      margin-top: 2rem;
+      margin-bottom: 3rem;
+      padding: 0;
     }
   }
 
   @include mq(sm) {
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     align-items: flex-start;
     padding: 2rem;
   }

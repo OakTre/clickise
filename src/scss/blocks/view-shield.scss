@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  max-width: 142rem;
+  max-width: 140rem;
   min-height: 50rem;
   margin-right: auto;
   margin-left: auto;
@@ -44,6 +44,11 @@
 
     max-width: 87rem;
     font: var(--weight) var(--font-heading);
+
+    @include mq(sm) {
+      --weight: 600;
+      font: var(--weight) var(--font-heading-big);
+    }
   }
 
   &__btn {
@@ -67,6 +72,6 @@
     --px: 1.6rem;
     --br: 1.6rem;
 
-    min-height: auto;
+    min-height: 50rem;
   }
 }

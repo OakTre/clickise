@@ -12,9 +12,14 @@
 
   &__container {
     width: 100%;
-    max-width: 140rem;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0;
+
+    @include mq(custom, max, 1360) {
+      padding-right: var(--padding-offset);
+      padding-left: var(--padding-offset);
+    }
 
     @include mq(md) {
       display: flex;
@@ -27,6 +32,12 @@
     display: flex;
     gap: 1.6rem;
     align-items: center;
+
+    @include mq(md) {
+      .button--light {
+        display: none;
+      }
+    }
   }
 
   &-grid__column {

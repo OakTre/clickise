@@ -1,6 +1,10 @@
 .more-articles {
   margin-bottom: 12rem;
 
+  @include mq(sm) {
+    margin-bottom: 10rem;
+  }
+
   &__list {
     @include mq(sm) {
       display: block;

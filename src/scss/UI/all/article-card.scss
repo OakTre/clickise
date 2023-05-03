@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .article-card {
   position: relative;
   display: flex;
@@ -6,20 +7,24 @@
 
   &__image-container {
     position: relative;
+    z-index: 2;
     width: 100%;
     height: 36rem;
     margin-bottom: 3rem;
+    overflow: hidden;
+    border-radius: 1.6rem;
 
     @include mq(sm) {
-      height: 23rem;
-      margin-bottom: 1.6rem;
+      height: 26rem;
+      margin-bottom: 2.4rem;
     }
 
     img {
+      z-index: -1;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 1.6rem;
+      transition: transform 400ms ease-in-out;
 
       @include mq(sm) {
         border-radius: 0.8rem;
@@ -47,6 +52,18 @@
       bottom: 1.6rem;
       left: 1.6rem;
     }
+
+    &--position-top {
+      top: 2rem;
+      right: 2rem;
+      bottom: auto;
+      left: auto;
+
+      @include mq(sm) {
+        top: 2rem;
+        right: 2rem;
+      }
+    }
   }
 
   &__info {
@@ -72,6 +89,11 @@
         content: "";
       }
     }
+
+    @include mq(sm) {
+      margin-bottom: 1.6rem;
+      font: var(--weight) var(--font-heading);
+    }
   }
 
   &__txt {
@@ -85,7 +107,15 @@
     color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
 
     @include mq(sm) {
-      margin-top: 1.6rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &:hover {
+    .article-card__image-container {
+      img {
+        transform: scale(1.15);
+      }
     }
   }
 }

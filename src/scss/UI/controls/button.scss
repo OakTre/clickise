@@ -13,6 +13,11 @@
   border-radius: var(--br);
   transition: background-color var(--transition);
 
+  @include mq(sm) {
+    --py: 1.2rem;
+    --px: 1.6rem;
+  }
+
   &:hover {
     --primary-b: 41%;
   }
@@ -47,7 +52,8 @@
     --bg: hsla(var(--color-white-h) var(--color-white-s) var(--color-white-b) / var(--default-alfa-bg));
 
     &:hover {
-      --color-white-b: 95%;
+      --default-alfa-bg: 10%;
+      --bg: hsla(var(--primary-h) var(--primary-s) var(--primary-b) / var(--default-alfa-bg));
     }
   }
 }

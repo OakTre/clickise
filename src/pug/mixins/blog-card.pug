@@ -1,6 +1,9 @@
 mixin blog-card()
   article.article-card
     .article-card__image-container
+      .article-card__tags.article-card__tags--position-top
+        +icon-tag("eye", "100")(class="--white")
+        +icon-tag("time-clock", "10 минут")(class="--white")
       .article-card__tags
         a.tag(href="./") Категория статьи
       img(src="assets/images/cards/img1.jpg" alt="")

@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 .radio-toggler {
   display: block;
+  flex-shrink: 0;
 
   &__label {
     --color-white-h: 0;
@@ -37,7 +38,8 @@
 
   input:checked {
     ~.radio-toggler__label {
-      --border: 0;
+      --border: 1px;
+      --border-color: transparent;
       --default-alfa-color: 100%;
       --color-white-h: var(--primary-h);
       --color-white-s: var(--primary-s);

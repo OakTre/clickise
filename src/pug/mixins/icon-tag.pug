@@ -1,4 +1,4 @@
 mixin icon-tag(icon, name)
-  .icon-tag
+  .icon-tag&attributes(attributes)
     +icon-mono(icon)(width="20" height="20" class="icon-tag__icon")
     span.icon-tag__label= name

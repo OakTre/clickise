@@ -1,8 +1,19 @@
+/* stylelint-disable selector-class-pattern */
 .icon-tag {
+  --bg-h: var(--color-bg-h);
+  --bg-s: var(--color-bg-s);
+  --bg-b: var(--color-bg-b);
+  --bg-alfa: var(var(--default-alfa-bg));
+  --bg: hsla(var(--bg-h) var(--bg-s) var(--bg-b) / var(--bg-alfa));
   --default-alfa-color: 90%;
   --color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+  --py: 0;
+  --px: 0;
+  --br: 0;
   display: inline-flex;
   align-items: center;
+  padding: var(--py) var(--px);
+  border-radius: var(--br);
 
   &__icon {
     --default-alfa-color: 90%;
@@ -17,5 +28,13 @@
     display: block;
     color: var(--color);
     font: var(--weight) var(--font-reg);
+  }
+
+  &.--white {
+    --py: 0.4rem;
+    --px: 0.8rem;
+    --bg-alfa: 80%;
+    --br: 4.3rem;
+    background-color: var(--bg);
   }
 }
