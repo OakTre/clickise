@@ -1,0 +1,12 @@
+section.menu
+  .site-container
+    header.menu__header
+      a.logo(href="./" aria-label="Перейти на главную страницу")
+        +icon-multi("logo")(width="308" height="36" class="logo__desktop" aria-label="Логотип компании Clickise")
+        +icon-multi("logo-mobile")(width="100" height="33" aria-hidden="true" class="logo__mobile" aria-label="Логотип компании Clickise")
+
+      button.btn-burger.js-close-menu(aria-label="Открыть главное меню")
+        span.visually-hidden Закрыть главное меню
+        +icon-mono("close")(width="12" height="9")
+
+    +nav()(class="footer__nav nav--column nav--big")
