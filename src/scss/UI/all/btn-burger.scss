@@ -4,7 +4,7 @@
   --bg-b: var(--color-white-b);
   --bg: hsla(var(--bg-h) var(--bg-s) var(--bg-b) / var(--default-alfa-bg));
 
-  display: flex;
+  display: none;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
@@ -13,5 +13,7 @@
   background-color: var(--bg);
   border-radius: 50%;
 
-  @include mq(md) {}
+  @include mq(md) {
+    display: flex;
+  }
 }

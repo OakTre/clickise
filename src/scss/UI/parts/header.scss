@@ -25,6 +25,9 @@
       display: flex;
       gap: 0;
       justify-content: space-between;
+      padding: 0;
+      padding-right: var(--padding-offset);
+      padding-left: var(--padding-offset);
     }
   }
 

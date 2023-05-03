@@ -140,24 +140,24 @@ button {
   outline: none;
   cursor: pointer;
   transition: color 0.2s;
-  user-select: none;
   -webkit-appearance: none;
+  user-select: none;
 }
 
 a {
-  background-color: transparent;
-  text-decoration: none;
-  transition: color 0.2s;
   color: hsla(var(--dark-h) var(--dark-s) var(--dark-b) / var(--default-alfa-color));
+  text-decoration: none;
+  background-color: transparent;
   outline: none;
+  transition: color 0.2s;
 }
 
 svg {
-  flex-shrink: 0;
   display: block;
+  flex-shrink: 0;
+  transition: fill 0.2s;
   user-select: none;
   fill: currentcolor;
-  transition: fill 0.2s;
 }
 
 img {
@@ -168,8 +168,8 @@ img {
 }
 
 .list-rest {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -209,15 +209,19 @@ img {
 .page-main {
   flex-grow: 1;
   margin-top: calc(var(--header-height) + 3rem);
+
+  @include mq(sm) {
+    margin-top: calc(var(--header-height) + 4rem);
+  }
 }
 
 .disable-scroll {
-  overflow: hidden;
-  height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 button:focus {
