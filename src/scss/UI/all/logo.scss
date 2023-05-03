@@ -1,5 +1,6 @@
 .logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-start;
 
   max-width: 30.8rem;
 
@@ -18,6 +19,9 @@
 
     @include mq(sm) {
       display: block;
+
+      width: 100%;
+      height: auto;
     }
   }
 
